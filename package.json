@@ -170,6 +170,7 @@
     "phantomjs-prebuilt": "^2.1.7",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
+    "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.6.0"
@@ -179,6 +180,6 @@
     "url": "https://github.com/daiweixiong/vue-wechat-wilddog.git"
   },
   "bugs": {
-    "url": "https://github.com/daiweixiong/vue-wechat-wilddog.git"
+    "url": "https://github.com/daiweixiong/vue-wechat-wilddog/issues"
   }
 }

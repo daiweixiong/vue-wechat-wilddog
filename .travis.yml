@@ -20,5 +20,3 @@ script:
 after_success:
   - npm run codecov
 
-
-https://github.com/daiweixiong/vue-wechat-wilddog.git
