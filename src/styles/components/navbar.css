@@ -1,0 +1,31 @@
+
+   .cov-nav {
+        background-color: #252e39;
+        color: #fff;
+    }
+    .nav-tab {
+        display: inline-block;
+        height: 3rem;
+        line-height: 3rem;
+        text-align: center;
+        min-width: 6rem;
+        cursor: pointer;
+    }
+    .nav-moving {
+        position: absolute;
+        background-color: #4CFFFE;
+        height: 8px;
+        width: 1rem;
+        border-radius: 4px;
+        transition-property: transform, width;
+        transition-duration: .3s;
+        transition-timing-function: ease-out;
+        margin-top: -1px;
+    }
+    .nav-rail {
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        bottom: 1rem;
+        background-color: #182128;
+    }

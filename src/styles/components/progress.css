@@ -1,0 +1,10 @@
+.v-progress {
+  position: fixed;
+  z-index: 100001;
+  top: 0;
+  left: 0;
+  background-color: var(--progress);
+  width: 100%;
+  height: 0.2rem;
+  transition: width .5s ease;
+}

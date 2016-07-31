@@ -1,0 +1,42 @@
+.v-pagin {
+  margin: 1rem 0 0;
+  padding: 1rem 0;
+  text-align: center;
+  border-top: 1px solid color(white lightness(-10%));
+
+  & a {
+    display: inline-block;
+    padding: 4px 10px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-left-width: 0;
+
+    &:hover {
+      background-color: color(white lightness(-10%));
+    }
+
+    &.current {
+      background-color: color(white lightness(-10%));
+    }
+
+    &.disabled {
+      cursor: default;
+      color: color(white lightness(-30%));
+      background-color: transparent;
+    }
+  }
+
+  & a:first-child{
+	border-left-width: 1px;
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+  }
+
+  & a:last-child{
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+  }
+}
