@@ -57,7 +57,7 @@ var data = {
                     date: now
                 },
                 {
-                    text: '项目地址: https://github.com/....',
+                    text: '项目地址: https://github.com/daiweixiong/vue-wechat-wilddog',
                     date: now
                 }
             ]
