@@ -2,10 +2,10 @@
 
 ### Setup
 
-进入项目地址,然后安装依赖:
+进入项目地址,然后安装依赖,
 命令行:npm install
 
-如果依赖安装没报错,则开始,build and start server:
+如果依赖安装没报错,则开始,build and start server,
 命令行:npm run start
 
 运行完npm run start ,将可以在浏览器端访问http://localhost:3000
