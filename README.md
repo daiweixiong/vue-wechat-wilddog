@@ -1,6 +1,6 @@
 # Chat by Vue + Webpack + wilddog + vue-router, 可以实时异地聊天
 
-### Setup
+### 开始:
 
 进入项目地址,然后安装依赖,
 命令行:npm install
