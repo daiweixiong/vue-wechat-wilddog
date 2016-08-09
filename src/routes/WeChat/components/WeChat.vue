@@ -2,12 +2,12 @@
     <div class="wrap">
     <div id="chat">
         <div class="sidebar">
-            <card :user="user" :search.sync="search"></card>
-            <list :user-list="userList" :session="session" :session-index.sync="sessionIndex" :search="search"></list>
+            <card></card>
+            <list></list>
         </div>
         <div class="main">
-            <message :session="session" :user="user" :user-list="userList"></message>
-            <text :session="session" :session-index="sessionIndex"></text>
+            <message></message>
+            <text></text>
         </div>
     </div>
     </div>
@@ -20,46 +20,15 @@
     import Text from './Text.vue';
     import Message from './Message.vue';
 
+    import { mapActions, mapGetters } from 'vuex'
+
     export default {
-        data () {
-            let serverData = store.fetch();
-            return {
-                serverData:serverData,
-                sessionIndex:0
-            }
-        },
-        computed: {
-            user () {
-                return this.serverData.user;
-            },
-            userList () {
-                return this.serverData.userList;
-            },
-            sessionList () {
-                return this.serverData.sessionList;
-            },
-            search () {
-                return '';
-            },
-            session () {
-                return this.serverData.sessionList[this.sessionIndex]
-            }
-
-        },
-        created () {
-            store.on('update', this.update)
-        },
-
-        destroyed () {
-            store.removeListener('update', this.update)
-        },
-
-        methods: {
-            update () {
-                this.serverData = store.fetch()
-
-            }
-        },
+       created () {
+           store.on('update', this.update)
+       },
+       methods: {
+           ...mapActions(['update'])
+       },
         components: {
             Card, List, Text, Message
         }

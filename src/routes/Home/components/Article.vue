@@ -1,6 +1,6 @@
 <template>
 	<article class="list-item">
-		<div class="item-preview" :style="{'background-image': 'url('+ data.author.avatar_url +')'}"></div>
+		<div class="item-preview" :style="{'background-image': 'url('+ cloudSrc +')'}"></div>
 		<p class="item-title">
 			<template v-if='data.top || data.good'>
 				<span v-show='data.top' class="put_top">置顶</span>
@@ -29,7 +29,10 @@
             return {
                 cloudSrc: require('../assets/Duck.jpg')
             }
-        }
+        },
+		ready(){
+			this.cloudSrc = this.data.author.avatar_url 
+		}
     }
 </script>
 <style>

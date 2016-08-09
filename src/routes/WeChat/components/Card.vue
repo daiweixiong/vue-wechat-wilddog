@@ -6,15 +6,21 @@
             <p class="name">{{user.name}}</p>
         </header>
         <footer>
-            <input class="search" type="text" placeholder="search user..." v-model="search">
+            <input class="search" type="text" placeholder="search user..." @input="inpSearch">
         </footer>
     </div>
 </template>
 
 
 <script>
+    import { mapActions, mapGetters } from 'vuex'
     export default {
-        props: ['user', 'search']
+        computed: {
+            ...mapGetters(['user','search'])  
+        },
+        methods:{
+            ...mapActions(['inpSearch'])
+        }
     };
 </script>
 

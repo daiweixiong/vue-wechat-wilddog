@@ -16,8 +16,8 @@
 </template>
 
 <script>
-import store from '../store'
-import Item from './Item.vue'
+import store from '../../../store'
+import Item from '../../../components/Item.vue'
 
 export default {
 

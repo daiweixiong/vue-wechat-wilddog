@@ -2,7 +2,8 @@
 import subRoutes from './routes'
 
 export default {
-  title: '用户管理',
+  title: 'user',
+  name:'user',
   component: resolve => require(['./components/UserView'], resolve),
   subRoutes
 }

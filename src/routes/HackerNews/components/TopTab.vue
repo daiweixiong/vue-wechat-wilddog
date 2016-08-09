@@ -1,13 +1,14 @@
 <template>
 	<div class="topic-header">
 		<a v-for='d in list'
-		   v-link="{ path: d,params: { page:1},append:d=='news',query:{tab:d} }"
-			:class="['topic-tab', isCurrent(d)]">{{d}}</a>
+		   v-link="{ name: d,params: { page:1} ,query:{tab:d}}"
+			:class="['topic-tab', 'current-tab']">{{d}}</a>
 	</div>
 </template>
+<!--append:d=='news',query:{tab:d}-->
 <script>
 import { TOPIC_OPTIONS } from 'store/constants'
-let list = ['news','user','item']
+let list = ['newsview','userview','itemview']
 	export default{
 		data(){
 			return {
@@ -16,9 +17,12 @@ let list = ['news','user','item']
 		},
 		methods:{
 			isCurrent(tab){
-				return this.$route.query.tab === tab ? 'current-tab':''
+				return this.$route.query.tab === tab ? 'current-tab':'' 
 			}
-		}
+		},
+		ready () {
+			this.$route.router.go({name: 'newsview'})
+		},
 	}
 </script>
 <style>
@@ -28,7 +32,7 @@ let list = ['news','user','item']
 		border-radius: 3px 3px 0 0;
 	}
 	
-	.topic-tab.current-tab {
+	.current-tab {
 		background-color: #80bd01;
 		color: #fff;
 		padding: 3px 4px;

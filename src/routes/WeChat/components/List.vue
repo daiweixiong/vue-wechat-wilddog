@@ -10,12 +10,18 @@
 </template>
 
 <script>
+    import { mapActions, mapGetters } from 'vuex'
     export default {
-        props: ['userList', 'sessionIndex', 'session', 'search'],
+        computed: {
+            ...mapGetters(['userList', 'session', 'search'])  
+
+        },
         methods: {
             select (value) {
-                this.sessionIndex = this.userList.indexOf(value);
-            }
+                let index = this.userList.indexOf(value);
+                this.selected(index);
+            },
+            ...mapActions(['selected'])
         },
         filters: {
             search (list) {

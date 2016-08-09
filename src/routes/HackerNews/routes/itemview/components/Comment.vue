@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import store from '../store'
+import store from '../../../store'
 
 export default {
 
@@ -43,7 +43,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "../variables.styl"
+@import "../../../variables.styl"
 
 .comhead
   color $gray

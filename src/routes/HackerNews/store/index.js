@@ -3,7 +3,6 @@ import { EventEmitter } from 'events'
 import { Promise } from 'es6-promise'
 
 const api = new Firebase('https://hacker-news.firebaseio.com/v0')
-//const api = new Firebase('https://samplechat.firebaseio-demo.com/users')
 const itemsCache = Object.create(null)
 const store = new EventEmitter()
 const storiesPerPage = store.storiesPerPage = 30

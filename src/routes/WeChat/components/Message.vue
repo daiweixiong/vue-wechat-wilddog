@@ -16,13 +16,15 @@
 
 <script>
     import Vue from 'vue'
+    import { mapActions, mapGetters } from 'vuex'
     export default {
-        props: ['session', 'user', 'userList'],
         computed: {
             sessionUser () {
                 let users = this.userList.filter(item => item.id === this.session.userId);
                 return users[0];
-            }
+            },
+            ...mapGetters(['session','user','userList'])  
+
         },
         filters: {
             // 筛选出用户头像

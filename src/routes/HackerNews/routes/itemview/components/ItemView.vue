@@ -19,8 +19,8 @@
 </template>
 
 <script>
-import store from '../store'
-import Item from './Item.vue'
+import store from '../../../store'
+import Item from '../../../components/Item.vue'
 import Comment from './Comment.vue'
 
 export default {
@@ -69,7 +69,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@import "../variables.styl"
+@import "../../../variables.styl"
 
 .item-view
   .item

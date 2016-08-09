@@ -1,6 +1,8 @@
 // We only need to import the modules necessary for initial render
 const createRoutes = {
-	'/login': require("./Login")
+	'/newsview': require("./newsview"),
+	'/userview': require("./userview"),
+	'/itemview': require("./itemview"),
 }
 
 

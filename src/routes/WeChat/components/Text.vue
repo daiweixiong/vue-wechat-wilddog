@@ -8,12 +8,15 @@
 
 <script>
     import store from '../store/storeWild';
+    import { mapActions, mapGetters } from 'vuex'
     export default {
-        props: ['session','sessionIndex'],
         data () {
             return {
                 text: ''
             };
+        },
+        computed: {
+                ...mapGetters(['session','sessionIndex'])  
         },
         methods: {
             inputing (e) {
